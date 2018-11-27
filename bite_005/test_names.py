@@ -24,3 +24,4 @@ def test_shortest_first_name():
 test_dedup_and_title_case_names()
 test_sort_by_surname_desc()
 test_shortest_first_name()
+

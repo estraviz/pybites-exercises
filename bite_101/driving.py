@@ -11,3 +11,4 @@ def allowed_driving(name, age):
         print(f"{name} is allowed to drive".replace("\xa0", " "))
     else:
         print(f"{name} is not allowed to drive".replace("\xa0", " "))
+
