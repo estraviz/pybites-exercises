@@ -15,4 +15,3 @@ def test_allowed_to_drive(capfd):
     allowed_driving('julian', 19)
     output = capfd.readouterr()[0].strip()
     assert output == 'julian is allowed to drive'
-

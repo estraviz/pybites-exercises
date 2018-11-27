@@ -19,9 +19,3 @@ def test_sort_by_surname_desc():
 
 def test_shortest_first_name():
     assert shortest_first_name(NAMES) == 'Al'
-
-
-test_dedup_and_title_case_names()
-test_sort_by_surname_desc()
-test_shortest_first_name()
-
