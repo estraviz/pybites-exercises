@@ -1,4 +1,4 @@
-from numbers import sum_numbers
+from numbers2 import sum_numbers
 
 
 def test_sum_numbers_default_args():
