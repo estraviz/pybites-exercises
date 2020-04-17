@@ -1,6 +1,6 @@
 # Bite 111. Use the ipinfo API to lookup IP country
 
-## Description
+## Description
 
 In this Bite you will use the `requests` library to make a GET request to the ipinfo service.
 
