@@ -1,6 +1,6 @@
 # Bite 180. Group names by country
 
-## Description
+## Description
 
 In this Bite you are presented with a list of surnames, names, and countries. These 3 fields are in a multiline string, separated by a comma.
 
