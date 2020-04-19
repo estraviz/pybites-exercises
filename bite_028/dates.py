@@ -1,8 +1,4 @@
-"""
-Bite 28. Converting date strings to datetimes
-"""
-
-from collections import defaultdict
+from collections import Counter
 from datetime import datetime
 import os
 import re
@@ -34,8 +30,6 @@ def convert_to_datetime(date_str):
 def get_month_most_posts(dates):
     """Receives a list of datetimes and returns the month (format YYYY-MM)
        that occurs most"""
-    counter = defaultdict(int)
-    for date in dates:
-        month = datetime.strftime(date, '%Y-%m')
-        counter[month] += 1
-    return max(counter, key=counter.get)
+    months = [datetime.strftime(date, '%Y-%m') for date in dates]
+    counter = Counter(months)
+    return counter.most_common(1)[0][0]
