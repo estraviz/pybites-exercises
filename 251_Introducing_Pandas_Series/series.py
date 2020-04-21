@@ -48,6 +48,4 @@ def object_values_series() -> pd.Series:
     Don't worry about the series name.
     """
     list_of_objects = [MyClass(chr(i)) for i in range(65, 91)]
-    b = MyClass('B')
-    print(type(b))
     return pd.Series([x.name for x in list_of_objects], index=list(range(101, 127)))
