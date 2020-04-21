@@ -1,6 +1,6 @@
 # Bite 28. Converting date strings to datetimes
 
-## Description
+## Description
 
 In this Bite you are provided with a list of publish dates of all our PyBites blog posts. They are in this format: _Thu, 04 May 2017 20:46:00 +0200._
 
