@@ -1,6 +1,6 @@
 # Bite 143. Look up a value in 3 dictionaries
 
-## Description
+## Description
 
 In this Bite you are presented with 3 dictionaries. Complete `get_person_age` that takes a `name` as argument and returns the age if in any of the 3 dictionaries. The lookup should be case insensitive, so _tim_, _Tim_ and _tiM_ should all yield _30_. If not in any of the dictionaries, return `Not found`.
 
