@@ -1,31 +1,31 @@
 from fizzbuzz import fizzbuzz
+import pytest
 
 # write one or more pytest functions below, they need to start with test_
 
 
-def test_divide_by_three():
-    assert fizzbuzz(3) == 'Fizz'
-    assert fizzbuzz(18) == 'Fizz'
-    assert fizzbuzz(54) == 'Fizz'
-    assert fizzbuzz(99) == 'Fizz'
-
-
-def test_divide_by_five():
-    assert fizzbuzz(5) == 'Buzz'
-    assert fizzbuzz(25) == 'Buzz'
-    assert fizzbuzz(35) == 'Buzz'
-    assert fizzbuzz(55) == 'Buzz'
-
-
-def test_divide_by_fifteen():
-    assert fizzbuzz(15) == 'Fizz Buzz'
-    assert fizzbuzz(60) == 'Fizz Buzz'
-    assert fizzbuzz(90) == 'Fizz Buzz'
-    assert fizzbuzz(360) == 'Fizz Buzz'
-
-
-def test_not_multiple_of_three_or_five():
-    assert fizzbuzz(8) == 8
-    assert fizzbuzz(67) == 67
-    assert fizzbuzz(1001) == 1001
-    assert fizzbuzz(1234) == 1234
+@pytest.mark.parametrize(
+    "test_input,expected", [
+        (3, 'Fizz'),
+        (18, 'Fizz'),
+        (54, 'Fizz'),
+        (99, 'Fizz'),
+        (5, 'Buzz'),
+        (25, 'Buzz'),
+        (35, 'Buzz'),
+        (55, 'Buzz'),
+        (15, 'Fizz Buzz'),
+        (60, 'Fizz Buzz'),
+        (90, 'Fizz Buzz'),
+        (360, 'Fizz Buzz'),
+        (8, 8),
+        (67, 67),
+        (1001, 1001),
+        (1234, 1234),
+        pytest.param(33, 'Buzz', marks=pytest.mark.xfail),
+        pytest.param(50, 'Fizz', marks=pytest.mark.xfail),
+        pytest.param(150, 150, marks=pytest.mark.xfail),
+    ],
+)
+def test_fizzbuzz(test_input, expected):
+    assert fizzbuzz(test_input) == expected
