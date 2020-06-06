@@ -1,6 +1,6 @@
 # Bite 66. Calculate the running average of a sequence
 
-## Description
+## Description
 
 Write a function that takes a sequence of items and returns the running average, so for example this:
 
