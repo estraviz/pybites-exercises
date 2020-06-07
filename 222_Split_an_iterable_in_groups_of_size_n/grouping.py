@@ -16,16 +16,19 @@ def group(iterable, n):
          list: The list of groups of size n,
                where each group is a list of n elements.
     """
-    full_list = []
-    aux_list = []
-    for i, num in enumerate(iterable):
-        aux_list.append(num)
-        if (i + 1) % n == 0:
-            full_list.append(aux_list)
-            aux_list = []
-    if aux_list:
-        full_list.append(aux_list)
-    return full_list
+
+    from itertools import islice
+
+    output = []
+    generator = (element for element in iterable)
+
+    while True:
+        chunk = list(islice(generator, n))
+        if chunk:
+            output.append(chunk)
+        else:
+            break
+    return output
 
 
 if __name__ == '__main__':
