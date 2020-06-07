@@ -2,6 +2,9 @@
 Bite 222. Split an iterable in groups of size n
 """
 
+import types
+from itertools import islice
+
 
 def group(iterable, n):
     """Splits an iterable set into groups of size n and a group
@@ -16,12 +19,12 @@ def group(iterable, n):
          list: The list of groups of size n,
                where each group is a list of n elements.
     """
-
-    from itertools import islice
+    if not isinstance(iterable, types.GeneratorType):
+        generator = (element for element in iterable)
+    else:
+        generator = iterable
 
     output = []
-    generator = (element for element in iterable)
-
     while True:
         chunk = list(islice(generator, n))
         if chunk:
