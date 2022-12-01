@@ -1,6 +1,6 @@
 # Bite 32. Don't let mutability fool you
 
-## Description
+## Description
 
 In this Bite you are presented with a function that copies the given items data structure.
 
